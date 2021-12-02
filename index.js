@@ -43,6 +43,10 @@ const upload = multer({
 	}),
 });
 
+app.get('/', (req, res) => {
+	res.status(200).send('Connected!');
+});
+
 app.post('/api/upload', upload.array('file', 1), (req, res) => {
 	res.send({ file: req.file });
 });

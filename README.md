@@ -36,7 +36,6 @@
     <tr>
       <td>1</td>
       <td>http://{URL}:{PORT}/api/uploads3</td>
-      <td>Upload hình lên S3</td>
     </tr>
   </tbody>
 </table>

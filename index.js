@@ -9,10 +9,10 @@ app.use(cors());
 app.use(express.json());
 
 aws.config.update({
-	accessKeyId: 'aASIA6OFSTGH227XK4UXJ',
-	secretAccessKey: 'aXyCZT3pAvX3hEJ0ZLjpII9NlfDyBbPuImbMtHRLh',
+	accessKeyId: 'ASIA6OFSTGH26JF62GHR',
+	secretAccessKey: '9y98/wzky/0GxORVe4/8xIru2PYKE+2WmDHR/tb8',
 	sessionToken:
-		'aFwoGZXIvYXdzEFoaDN7CkJc0fJJk1ELBACLPAb6CdnV1CD5YCg5UZRYYld7QKNmWARxqUEAZjp8O8XmH89rvwtFF8Ou3rfa/q7Q3BZkXZ+0s0ERcNwu4abkEyVzyDPguVUUVlgyS4lsBvwTTR0mew+OE4J8mO4YlcESaVrNxWwyJaXcKBhyZtiGDHJH0BmhNaDJq6X66/XtFP+sTUUnQpihzJwSmuDCF3TGko5bTjgjVNrlNOZ9JI92tB5AfP+oP36Tf+qONagSdW43tkJDRQXhx64HmPctSvW5A+TDtNruqOFaihfusqUW97yiw6ZCOBjIt3PGaUp9GSZvXNtysBCLHMH9/6iiQAV+d25Iosdiu/ZkW2EgV+rS397hjokVm',
+		'FwoGZXIvYXdzEF0aDKbzobk26IlVYrhzVyLPAXy0yjzHLOW1jefP/58rvakr8n1H0gyd/Ulmy4OOZVnIOwkGeudojm5wxIbpXJt0fzCjJhxcXARtxZrmY57nCJABoMj28zx4QMT7Df4Ar9F8yUcXwZdz6c2BMSuWgFJnXvF+W9BPIvMMMQiZqxpdH2lqF+wa5rY2syoey0wlqvvu9zDmELn30MwHg7F//YhyNWJMdvUAaqCqp0kQ/0xJ+nEoAbUsrH1Rx5QpgCXhTX0L3g4hSSs8FHfBZ3CultTl32QVonRCRmKBMqxx5KJuKCjrt5GOBjItADhQFiRVDFbUkCRaCcgDKhJUsrKd4GmP3HwCtg2yX4VXUUp9ykPEdQaAITHs',
 	region: 'us-east-1',
 	signatureVersion: 'v4',
 });
@@ -30,14 +30,6 @@ app.post('/api/setCLI', (req, res) => {
 	// 	},
 	// 	region: 'us-east-1',
 	// });
-
-	aws.config.update({
-		accessKeyId: req.body.accessKeyId,
-		secretAccessKey: req.body.secretAccessKey,
-		sessionToken: req.body.sessionToken,
-		region: 'us-east-1',
-		signatureVersion: 'v4',
-	});
 
 	console.log('aws config: ', aws.config);
 

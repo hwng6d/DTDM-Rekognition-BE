@@ -32,6 +32,10 @@ app.post('/api/setCLI', (req, res) => {
 	// });
 
 	console.log('aws config credentials: ', aws.config.credentials);
+
+	res.status(200).json({
+		status: 'success',
+	});
 });
 
 // aws.config.update({

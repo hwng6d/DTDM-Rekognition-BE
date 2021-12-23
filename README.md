@@ -79,4 +79,4 @@
 </table>
 <h4>Credits...</h4>
 <p>1. Cách gắn API: https://console.aws.amazon.com/rekognition/home?region=us-east-1#/</p>
-<p>2. Nodejs: Udemy Nodejs Course - Jonash</p>
+<p>2. Nodejs: Udemy Nodejs Course - Jonas</p>

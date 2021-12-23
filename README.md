@@ -8,6 +8,7 @@
 <h4>Samples...</h4>
 <p>{PORT}: 5000</p>
 <p>{URL}: http://ec2-3-82-207-155.compute-1.amazonaws.com (có thể thay đổi do restart AWS CLI)</p>
+<p>scripts: npm start</p>
 <h4>Test...</h4>
 <table>
   <thead>
@@ -71,3 +72,6 @@
     </tr>
   </tbody>
 </table>
+<h4>Credits...</h4>
+<p>1. Cách gắn API: https://console.aws.amazon.com/rekognition/home?region=us-east-1#/</p>
+<p>2. Nodejs: Udemy Nodejs Course - Jonash</p>

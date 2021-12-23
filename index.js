@@ -6,14 +6,14 @@ const multerS3 = require('multer-s3');
 const cors = require('cors');
 
 const app = express();
+app.use(cors());
 app.use(
 	bodyParser.urlencoded({
 		extended: false,
 	})
 );
 app.use(express.json());
-app.use(express.urlencoded());
-app.use(cors());
+//app.use(express.urlencoded());
 
 app.post('/api/setCLI', (req, res) => {
 	aws.config.credentials.accessKeyId = req.body.accessKeyId;

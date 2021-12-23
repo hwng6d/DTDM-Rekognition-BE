@@ -21,22 +21,22 @@ app.post('/api/setCLI', (req, res) => {
 	// aws.config.credentials.secretAccessKey = req.body.secretAccessKey;
 	// aws.config.credentials.sessionToken = req.body.sessionToken;
 
-	aws.config.update({
-		accessKeyId: req.body.accessKeyId,
-		secretAccessKey: req.body.secretAccessKey,
-		sessionToken: req.body.sessionToken,
-		region: 'us-east-1',
-		signatureVersion: 'v4',
-	});
-
 	// aws.config.update({
-	// 	credentials: {
-	// 		accessKeyId: req.body.accessKeyId,
-	// 		secretAccessKey: req.body.secretAccessKey,
-	// 		sessionToken: req.body.sessionToken,
-	// 	},
+	// 	accessKeyId: req.body.accessKeyId,
+	// 	secretAccessKey: req.body.secretAccessKey,
+	// 	sessionToken: req.body.sessionToken,
 	// 	region: 'us-east-1',
+	// 	signatureVersion: 'v4',
 	// });
+
+	aws.config.update({
+		credentials: {
+			accessKeyId: req.body.accessKeyId,
+			secretAccessKey: req.body.secretAccessKey,
+			sessionToken: req.body.sessionToken,
+		},
+		region: 'us-east-1',
+	});
 
 	console.log('aws config credentials: ', aws.config.credentials);
 

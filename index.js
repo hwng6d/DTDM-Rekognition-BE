@@ -1,16 +1,16 @@
 const express = require('express');
-//const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const aws = require('aws-sdk');
 const multer = require('multer');
 const multerS3 = require('multer-s3');
 const cors = require('cors');
 
 const app = express();
-// app.use(
-// 	bodyParser.json({
-// 		extended: false,
-// 	})
-// );
+app.use(
+	bodyParser.urlencoded({
+		extended: false,
+	})
+);
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());

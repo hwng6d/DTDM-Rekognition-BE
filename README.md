@@ -54,16 +54,11 @@
     </tr>
     <tr>
       <td>6</td>
-      <td>http://{URL}:{PORT}/api/labels</td>
-      <td>Nhận diện vật thể</td>
-    </tr>
-    <tr>
-      <td>7</td>
       <td>http://{URL}:{PORT}/api/celeb</td>
       <td>Nhận diện người nổi tiếng</td>
     </tr>
     <tr>
-      <td>8</td>
+      <td>7</td>
       <td>http://{URL}:{PORT}/api/compare</td>
       <td>So sánh gương mặt</td>
     </tr>

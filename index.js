@@ -9,15 +9,15 @@ app.use(cors());
 app.use(express.json());
 
 aws.config.update({
-	accessKeyId: 'ASIA6OFSTGH227XK4UXJ',
-	secretAccessKey: 'XyCZT3pAvX3hEJ0ZLjpII9NlfDyBbPuImbMtHRLh',
+	accessKeyId: 'aASIA6OFSTGH227XK4UXJ',
+	secretAccessKey: 'aXyCZT3pAvX3hEJ0ZLjpII9NlfDyBbPuImbMtHRLh',
 	sessionToken:
-		'FwoGZXIvYXdzEFoaDN7CkJc0fJJk1ELBACLPAb6CdnV1CD5YCg5UZRYYld7QKNmWARxqUEAZjp8O8XmH89rvwtFF8Ou3rfa/q7Q3BZkXZ+0s0ERcNwu4abkEyVzyDPguVUUVlgyS4lsBvwTTR0mew+OE4J8mO4YlcESaVrNxWwyJaXcKBhyZtiGDHJH0BmhNaDJq6X66/XtFP+sTUUnQpihzJwSmuDCF3TGko5bTjgjVNrlNOZ9JI92tB5AfP+oP36Tf+qONagSdW43tkJDRQXhx64HmPctSvW5A+TDtNruqOFaihfusqUW97yiw6ZCOBjIt3PGaUp9GSZvXNtysBCLHMH9/6iiQAV+d25Iosdiu/ZkW2EgV+rS397hjokVm',
+		'aFwoGZXIvYXdzEFoaDN7CkJc0fJJk1ELBACLPAb6CdnV1CD5YCg5UZRYYld7QKNmWARxqUEAZjp8O8XmH89rvwtFF8Ou3rfa/q7Q3BZkXZ+0s0ERcNwu4abkEyVzyDPguVUUVlgyS4lsBvwTTR0mew+OE4J8mO4YlcESaVrNxWwyJaXcKBhyZtiGDHJH0BmhNaDJq6X66/XtFP+sTUUnQpihzJwSmuDCF3TGko5bTjgjVNrlNOZ9JI92tB5AfP+oP36Tf+qONagSdW43tkJDRQXhx64HmPctSvW5A+TDtNruqOFaihfusqUW97yiw6ZCOBjIt3PGaUp9GSZvXNtysBCLHMH9/6iiQAV+d25Iosdiu/ZkW2EgV+rS397hjokVm',
 	region: 'us-east-1',
 	signatureVersion: 'v4',
 });
+
 app.post('/api/setCLI', (req, res) => {
-	console.log('req.body: ', req.body);
 	// aws.config.credentials.accessKeyId = req.body.accessKeyId;
 	// aws.config.credentials.secretAccessKey = req.body.secretAccessKey;
 	// aws.config.credentials.sessionToken = req.body.sessionToken;
@@ -31,7 +31,15 @@ app.post('/api/setCLI', (req, res) => {
 	// 	region: 'us-east-1',
 	// });
 
-	console.log('aws config credentials: ', aws.config.credentials);
+	aws.config.update({
+		accessKeyId: req.body.accessKeyId,
+		secretAccessKey: req.body.secretAccessKey,
+		sessionToken: req.body.sessionToken,
+		region: 'us-east-1',
+		signatureVersion: 'v4',
+	});
+
+	console.log('aws config: ', aws.config);
 
 	res.status(200).json({
 		status: 'success',

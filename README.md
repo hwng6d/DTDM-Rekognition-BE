@@ -1,6 +1,10 @@
 # DTDM-Rekognition-BE
 <h2>BACKEND PROJECT AMAZON REKOGNITION:</h2>
-<h3>HDSD</h3>
+<h3>THÀNH VIÊN</h3>
+<p>- Phạm Quốc Hưng 18110128</p>
+<p>- Lê Phước Hưng 18110297</p>
+<p>- Đặng Quốc Trung 18110220</p>
+<h3>HƯỚNG DẪN SỬ DỤNG</h3>
 <h4>Samples...</h4>
 <p>{PORT}: 5000</p>
 <p>{URL}: http://ec2-3-82-207-155.compute-1.amazonaws.com (có thể thay đổi do restart AWS CLI)</p>

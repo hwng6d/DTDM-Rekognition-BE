@@ -12,36 +12,40 @@ app.use(
 	})
 );
 app.use(express.json());
-app.use(express.urlencoded());
+//app.use(express.urlencoded());
 app.use(cors());
 
 app.post('/api/setCLI', (req, res) => {
-	aws.config.credentials.accessKeyId = req.body.accessKeyId;
-	aws.config.credentials.secretAccessKey = req.body.secretAccessKey;
-	aws.config.credentials.sessionToken = req.body.sessionToken;
+	try {
+		aws.config.credentials.accessKeyId = req.body.accessKeyId;
+		aws.config.credentials.secretAccessKey = req.body.secretAccessKey;
+		aws.config.credentials.sessionToken = req.body.sessionToken;
 
-	// aws.config.update({
-	// 	accessKeyId: req.body.accessKeyId,
-	// 	secretAccessKey: req.body.secretAccessKey,
-	// 	sessionToken: req.body.sessionToken,
-	// 	region: 'us-east-1',
-	// 	signatureVersion: 'v4',
-	// });
+		// aws.config.update({
+		// 	accessKeyId: req.body.accessKeyId,
+		// 	secretAccessKey: req.body.secretAccessKey,
+		// 	sessionToken: req.body.sessionToken,
+		// 	region: 'us-east-1',
+		// 	signatureVersion: 'v4',
+		// });
 
-	// aws.config.update({
-	// 	credentials: {
-	// 		accessKeyId: req.body.accessKeyId,
-	// 		secretAccessKey: req.body.secretAccessKey,
-	// 		sessionToken: req.body.sessionToken,
-	// 	},
-	// 	region: 'us-east-1',
-	// });
+		// aws.config.update({
+		// 	credentials: {
+		// 		accessKeyId: req.body.accessKeyId,
+		// 		secretAccessKey: req.body.secretAccessKey,
+		// 		sessionToken: req.body.sessionToken,
+		// 	},
+		// 	region: 'us-east-1',
+		// });
 
-	console.log('aws config credentials: ', aws.config.credentials);
+		console.log('aws config credentials: ', aws.config.credentials);
 
-	res.status(200).json({
-		status: 'success',
-	});
+		res.status(200).json({
+			status: 'success',
+		});
+	} catch (err) {
+		console.log(err);
+	}
 });
 
 // aws.config.update({

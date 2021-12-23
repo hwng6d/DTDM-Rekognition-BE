@@ -16,6 +16,7 @@ app.use(express.json());
 //app.use(express.urlencoded());
 
 app.post('/api/setCLI', (req, res) => {
+	console.log(req.body);
 	aws.config.credentials.accessKeyId = req.body.accessKeyId;
 	aws.config.credentials.secretAccessKey = req.body.secretAccessKey;
 	aws.config.credentials.sessionToken = req.body.sessionToken;

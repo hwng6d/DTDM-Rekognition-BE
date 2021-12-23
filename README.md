@@ -3,7 +3,7 @@
 <h3>HDSD</h3>
 <h4>Samples...</h4>
 <p>{PORT}: 5000</p>
-<p>{URL}: http://ec2-3-82-207-155.compute-1.amazonaws.com/</p>
+<p>{URL}: http://ec2-3-82-207-155.compute-1.amazonaws.com (có thể thay đổi do restart AWS CLI)</p>
 <h4>Test...</h4>
 <table>
   <thead>

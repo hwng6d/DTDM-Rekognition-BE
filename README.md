@@ -34,8 +34,38 @@
       <td rowspan="2">Upload hình lên S3</td>
     </tr>
     <tr>
-      <td>1</td>
+      <td>2</td>
       <td>http://{URL}:{PORT}/api/uploads3</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>http://{URL}:{PORT}/api/labels</td>
+      <td>Nhận diện vật thể</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>http://{URL}:{PORT}/api/texts</td>
+      <td>Nhận diện văn bản</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>http://{URL}:{PORT}/api/faces</td>
+      <td>Nhận diện khuôn mặt</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>http://{URL}:{PORT}/api/labels</td>
+      <td>Nhận diện vật thể</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>http://{URL}:{PORT}/api/celeb</td>
+      <td>Nhận diện người nổi tiếng</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>http://{URL}:{PORT}/api/compare</td>
+      <td>So sánh gương mặt</td>
     </tr>
   </tbody>
 </table>

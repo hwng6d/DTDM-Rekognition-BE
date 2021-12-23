@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 const aws = require('aws-sdk');
 const multer = require('multer');
 const multerS3 = require('multer-s3');
